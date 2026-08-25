@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 
   <meta charset="UTF-8">
@@ -14,10 +15,14 @@
 
   <meta
     name="description"
-    content="SNK Academy — Lesson 02"
+    content="SNK Academy Free Course — Lesson 02"
   >
 
   <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     *{
       margin:0;
@@ -30,44 +35,62 @@
     }
 
     body{
-      font-family:Arial, Helvetica, sans-serif;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
       background:#050505;
-
       color:#fff;
 
       line-height:1.6;
+
+      overflow-x:hidden;
     }
 
     a{
       text-decoration:none;
-
       color:inherit;
     }
 
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
     .container{
       width:min(1050px,92%);
-
       margin:auto;
     }
 
 
-    /* =================================
+    /* =====================================================
        HEADER
-    ================================= */
+    ===================================================== */
 
     .header{
       position:sticky;
 
       top:0;
 
-      z-index:999;
+      z-index:9999;
 
-      background:rgba(5,5,5,.95);
+      background:
+        rgba(5,5,5,.95);
 
-      backdrop-filter:blur(15px);
+      backdrop-filter:
+        blur(16px);
 
-      border-bottom:1px solid #1c1c1c;
+      -webkit-backdrop-filter:
+        blur(16px);
+
+      border-bottom:
+        1px solid #1c1c1c;
     }
 
     .nav{
@@ -82,20 +105,45 @@
       gap:20px;
     }
 
+
+    /* LOGO */
+
+    .logo{
+      display:flex;
+
+      align-items:center;
+    }
+
     .logo img{
       width:110px;
 
       height:auto;
     }
 
+
+    /* NAV ACTIONS */
+
+    .nav-actions{
+      display:flex;
+
+      align-items:center;
+
+      gap:10px;
+    }
+
+
+    /* BACK BUTTON */
+
     .back-btn{
-      color:#aaa;
+      padding:
+        9px 14px;
 
-      border:1px solid #292929;
-
-      padding:9px 15px;
+      border:
+        1px solid #292929;
 
       border-radius:8px;
+
+      color:#aaa;
 
       font-size:12px;
 
@@ -110,47 +158,68 @@
       border-color:#b7ff00;
     }
 
+
+    /* LOGIN */
+
     .login-btn{
+      padding:
+        10px 15px;
+
       background:#b7ff00;
 
       color:#050505;
-
-      padding:10px 15px;
 
       border-radius:8px;
 
       font-size:12px;
 
       font-weight:800;
+
+      transition:.3s;
+    }
+
+    .login-btn:hover{
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(183,255,0,.18);
     }
 
 
-    /* =================================
+    /* =====================================================
        PAGE
-    ================================= */
+    ===================================================== */
 
     .page{
-      padding:65px 0 90px;
+      padding:
+        65px 0 90px;
     }
 
 
-    /* =================================
+    /* =====================================================
        BADGE
-    ================================= */
+    ===================================================== */
 
     .badge{
-      display:inline-block;
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:8px;
+
+      padding:
+        7px 12px;
 
       color:#b7ff00;
-
-      border:
-        1px solid
-        rgba(183,255,0,.25);
 
       background:
         rgba(183,255,0,.06);
 
-      padding:7px 12px;
+      border:
+        1px solid
+        rgba(183,255,0,.25);
 
       border-radius:30px;
 
@@ -163,22 +232,34 @@
       margin-bottom:18px;
     }
 
+    .badge-dot{
+      width:6px;
+      height:6px;
 
-    /* =================================
+      background:#b7ff00;
+
+      border-radius:50%;
+
+      box-shadow:
+        0 0 10px #b7ff00;
+    }
+
+
+    /* =====================================================
        TITLE
-    ================================= */
+    ===================================================== */
 
     h1{
       font-size:
         clamp(
-          35px,
-          5vw,
-          58px
+          38px,
+          6vw,
+          62px
         );
 
-      line-height:1.1;
+      line-height:1.08;
 
-      letter-spacing:-2px;
+      letter-spacing:-2.5px;
 
       margin-bottom:12px;
     }
@@ -196,18 +277,19 @@
     }
 
 
-    /* =================================
+    /* =====================================================
        VIDEO
-    ================================= */
+    ===================================================== */
 
     .video-box{
       width:100%;
 
       aspect-ratio:16/9;
 
-      background:#0c0c0c;
+      background:#0b0b0b;
 
-      border:1px solid #222;
+      border:
+        1px solid #222;
 
       border-radius:18px;
 
@@ -218,6 +300,8 @@
       align-items:center;
 
       justify-content:center;
+
+      position:relative;
     }
 
     .video-placeholder{
@@ -227,23 +311,24 @@
     }
 
     .play-icon{
-      width:70px;
+      width:72px;
 
-      height:70px;
-
-      margin:0 auto 18px;
+      height:72px;
 
       display:grid;
 
       place-items:center;
 
-      border-radius:50%;
+      margin:
+        0 auto 18px;
 
       background:#b7ff00;
 
       color:#050505;
 
-      font-size:27px;
+      border-radius:50%;
+
+      font-size:28px;
     }
 
     .video-placeholder h2{
@@ -259,18 +344,20 @@
     }
 
 
-    /* =================================
+    /* =====================================================
        VIDEO NOTE
-    ================================= */
+    ===================================================== */
 
     .video-note{
       margin-top:12px;
 
-      padding:13px 15px;
+      padding:
+        13px 15px;
 
       background:#0b0b0b;
 
-      border:1px solid #1e1e1e;
+      border:
+        1px solid #1d1d1d;
 
       border-radius:9px;
 
@@ -284,15 +371,15 @@
     }
 
 
-    /* =================================
+    /* =====================================================
        CONTENT GRID
-    ================================= */
+    ===================================================== */
 
     .content-grid{
       display:grid;
 
       grid-template-columns:
-        1fr 320px;
+        1fr 300px;
 
       gap:25px;
 
@@ -300,44 +387,45 @@
     }
 
 
-    /* =================================
-       CONTENT CARD
-    ================================= */
+    /* =====================================================
+       MAIN CARD
+    ===================================================== */
 
-    .content-card{
+    .card{
       background:#0c0c0c;
 
-      border:1px solid #202020;
+      border:
+        1px solid #202020;
 
       border-radius:16px;
 
       padding:28px;
     }
 
-    .content-card h2{
+    .card h2{
       font-size:24px;
 
       margin-bottom:15px;
     }
 
-    .content-card h2 span{
+    .card h2 span{
       color:#b7ff00;
     }
 
-    .content-card p{
+    .card p{
       color:#858585;
 
       font-size:14px;
 
       line-height:1.9;
 
-      margin-bottom:20px;
+      margin-bottom:18px;
     }
 
 
-    /* =================================
+    /* =====================================================
        LEARNING LIST
-    ================================= */
+    ===================================================== */
 
     .learning-list{
       display:flex;
@@ -360,7 +448,8 @@
 
       background:#111;
 
-      border:1px solid #202020;
+      border:
+        1px solid #202020;
 
       border-radius:9px;
 
@@ -386,12 +475,14 @@
       color:#b7ff00;
 
       border-radius:6px;
+
+      font-weight:800;
     }
 
 
-    /* =================================
+    /* =====================================================
        SIDEBAR
-    ================================= */
+    ===================================================== */
 
     .sidebar{
       display:flex;
@@ -402,38 +493,45 @@
     }
 
     .side-card{
+      padding:22px;
+
       background:#0c0c0c;
 
-      border:1px solid #202020;
+      border:
+        1px solid #202020;
 
       border-radius:16px;
-
-      padding:22px;
     }
 
     .side-card h3{
       font-size:16px;
 
-      margin-bottom:15px;
+      margin-bottom:10px;
     }
 
-    .side-card h3 span{
-      color:#b7ff00;
+    .side-card p{
+      color:#666;
+
+      font-size:12px;
+
+      line-height:1.7;
     }
 
 
-    /* =================================
-       LIVE BUTTON
-    ================================= */
+    /* =====================================================
+       LIVE CLASS
+    ===================================================== */
 
-    .live-button{
+    .live-btn{
       display:block;
 
       width:100%;
 
-      text-align:center;
+      margin-top:14px;
 
-      padding:12px;
+      padding:13px;
+
+      text-align:center;
 
       background:#b7ff00;
 
@@ -445,24 +543,35 @@
 
       font-weight:800;
 
-      margin-top:12px;
+      transition:.3s;
+    }
+
+    .live-btn:hover{
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(183,255,0,.15);
     }
 
 
-    /* =================================
+    /* =====================================================
        RESOURCES
-    ================================= */
+    ===================================================== */
 
     .resource{
       display:block;
 
-      padding:11px 12px;
+      padding:
+        11px 12px;
 
       margin-top:8px;
 
       background:#111;
 
-      border:1px solid #222;
+      border:
+        1px solid #222;
 
       border-radius:8px;
 
@@ -477,18 +586,16 @@
       color:#b7ff00;
 
       border-color:
-        rgba(183,255,0,.35);
+        rgba(183,255,0,.3);
     }
 
 
-    /* =================================
+    /* =====================================================
        LESSON NAVIGATION
-    ================================= */
+    ===================================================== */
 
     .lesson-navigation{
       display:flex;
-
-      justify-content:space-between;
 
       gap:15px;
 
@@ -502,7 +609,8 @@
 
       background:#0c0c0c;
 
-      border:1px solid #222;
+      border:
+        1px solid #222;
 
       border-radius:10px;
 
@@ -524,8 +632,6 @@
     }
 
     .lesson-nav strong{
-      color:#fff;
-
       font-size:13px;
     }
 
@@ -534,14 +640,18 @@
     }
 
 
-    /* =================================
+    /* =====================================================
        FOOTER
-    ================================= */
+    ===================================================== */
 
     .footer{
-      padding:35px 0;
+      padding:
+        38px 0;
 
-      border-top:1px solid #1c1c1c;
+      border-top:
+        1px solid #1c1c1c;
+
+      background:#050505;
 
       color:#666;
     }
@@ -549,9 +659,9 @@
     .footer-inner{
       display:flex;
 
-      justify-content:space-between;
-
       align-items:center;
+
+      justify-content:space-between;
 
       gap:20px;
     }
@@ -559,7 +669,7 @@
     .footer-brand{
       color:#fff;
 
-      font-size:17px;
+      font-size:18px;
 
       font-weight:800;
     }
@@ -569,21 +679,14 @@
     }
 
 
-    /* =================================
-       MOBILE
-    ================================= */
+    /* =====================================================
+       TABLET
+    ===================================================== */
 
     @media(max-width:800px){
 
       .content-grid{
         grid-template-columns:1fr;
-      }
-
-      .sidebar{
-        display:grid;
-
-        grid-template-columns:
-          1fr 1fr;
       }
 
       .back-btn{
@@ -593,26 +696,29 @@
     }
 
 
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
     @media(max-width:600px){
 
       .page{
-        padding:50px 0 70px;
+        padding:
+          50px 0 70px;
       }
 
       h1{
-        font-size:39px;
+        font-size:40px;
+
+        letter-spacing:-2px;
       }
 
       .video-box{
         border-radius:12px;
       }
 
-      .content-card{
+      .card{
         padding:22px;
-      }
-
-      .sidebar{
-        display:flex;
       }
 
       .lesson-navigation{
@@ -631,6 +737,26 @@
 
     }
 
+
+    /* =====================================================
+       VERY SMALL MOBILE
+    ===================================================== */
+
+    @media(max-width:400px){
+
+      h1{
+        font-size:35px;
+      }
+
+      .login-btn{
+        padding:
+          9px 11px;
+
+        font-size:11px;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -639,41 +765,52 @@
 <body>
 
 
-<!-- =================================
+<!-- =====================================================
      HEADER
-================================= -->
+===================================================== -->
 
 <header class="header">
 
   <div class="container nav">
 
 
-    <a href="course.html">
+    <!-- LOGO -->
+
+    <a
+      href="course.html"
+      class="logo"
+    >
 
       <img
         src="https://raw.githubusercontent.com/snkitinstitute/AssetsandProducts/main/snk-it-institute-logo.svg"
         alt="SNK Academy"
-        style="width:110px;"
       >
 
     </a>
 
 
-    <a
-      href="course.html"
-      class="back-btn"
-    >
-      ← Course Overview
-    </a>
+    <!-- NAV ACTIONS -->
+
+    <div class="nav-actions">
 
 
-    <a
-      href="https://snkitinstitute.github.io/login.html"
-      class="login-btn"
-    >
-      Login / Sign Up →
-    </a>
+      <a
+        href="course.html"
+        class="back-btn"
+      >
+        ← Course
+      </a>
 
+
+      <a
+        href="https://snkitinstitute.github.io/login.html"
+        class="login-btn"
+      >
+        Login / Sign Up →
+      </a>
+
+
+    </div>
 
   </div>
 
@@ -681,38 +818,48 @@
 
 
 
-<!-- =================================
+<!-- =====================================================
      MAIN
-================================= -->
+===================================================== -->
 
 <main class="page">
 
   <div class="container">
 
 
+    <!-- BADGE -->
+
     <div class="badge">
+
+      <span class="badge-dot"></span>
+
       LESSON 02 • FREE COURSE
+
     </div>
 
 
+    <!-- TITLE -->
+
     <h1>
 
-      Getting
+      Getting Started &
 
       <span>
-        Started
+        Basic Concepts
       </span>
 
     </h1>
 
 
     <p class="subtitle">
-      Recorded Class • 25 Minutes
+      Recorded Class • Lesson 02
     </p>
 
 
 
-    <!-- VIDEO -->
+    <!-- =================================================
+         VIDEO
+    ================================================== -->
 
     <div class="video-box">
 
@@ -738,19 +885,22 @@
     </div>
 
 
+    <!-- VIDEO NOTE -->
 
     <div class="video-note">
 
-      <strong>Note:</strong>
+      <strong>Video:</strong>
 
-      Recording প্রস্তুত হলে এই video area-তে
-      YouTube বা অন্য video link যুক্ত করা যাবে।
+      Recording প্রস্তুত হলে এই জায়গায়
+      YouTube / video link বসানো হবে।
 
     </div>
 
 
 
-    <!-- CONTENT -->
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
 
     <div class="content-grid">
 
@@ -760,12 +910,12 @@
       <div>
 
 
-        <div class="content-card">
+        <div class="card">
 
 
           <h2>
 
-            এই ক্লাসে
+            এই Lesson-এ
 
             <span>
               যা শিখবেন
@@ -776,13 +926,13 @@
 
           <p>
 
-            এই ক্লাসে course-এর practical learning
-            শুরু করার জন্য প্রয়োজনীয় basic setup,
-            tools এবং learning environment সম্পর্কে
-            ধারণা দেওয়া হবে।
+            এই lesson-এ আপনি course-এর
+            মূল বিষয়গুলো সম্পর্কে basic ধারণা
+            তৈরি করবেন। নতুনদের জন্য প্রয়োজনীয়
+            fundamental concepts সহজভাবে
+            বোঝানো হবে।
 
           </p>
-
 
 
           <div class="learning-list">
@@ -794,7 +944,7 @@
                 ✓
               </div>
 
-              Learning Environment Setup
+              Basic Concepts সম্পর্কে ধারণা
 
             </div>
 
@@ -805,7 +955,7 @@
                 ✓
               </div>
 
-              প্রয়োজনীয় Tools সম্পর্কে ধারণা
+              প্রয়োজনীয় Tools সম্পর্কে পরিচিতি
 
             </div>
 
@@ -816,7 +966,7 @@
                 ✓
               </div>
 
-              Basic Workflow
+              Step-by-Step Learning Process
 
             </div>
 
@@ -827,7 +977,7 @@
                 ✓
               </div>
 
-              Practical Learning Method
+              Practical Learning-এর শুরু
 
             </div>
 
@@ -838,7 +988,7 @@
                 ✓
               </div>
 
-              Practice করার নিয়ম
+              পরবর্তী Lesson-এর প্রস্তুতি
 
             </div>
 
@@ -849,10 +999,14 @@
 
 
 
-        <!-- NAVIGATION -->
+        <!-- =================================================
+             LESSON NAVIGATION
+        ================================================== -->
 
         <div class="lesson-navigation">
 
+
+          <!-- PREVIOUS -->
 
           <a
             href="lesson-01.html"
@@ -863,31 +1017,26 @@
               ← PREVIOUS
             </small>
 
-
             <strong>
-              Introduction & Overview
+              Lesson 01 — Introduction
             </strong>
 
           </a>
 
 
+          <!-- NEXT -->
 
           <a
-            href="#"
+            href="lesson-03.html"
             class="lesson-nav next"
-            onclick="
-              alert('Lesson 03 শীঘ্রই যুক্ত করা হবে।');
-              return false;
-            "
           >
 
             <small>
               NEXT →
             </small>
 
-
             <strong>
-              Basic Skills
+              Lesson 03 — Practical Session
             </strong>
 
           </a>
@@ -895,58 +1044,47 @@
 
         </div>
 
+
       </div>
 
 
 
-      <!-- SIDEBAR -->
+      <!-- =================================================
+           SIDEBAR
+      ================================================== -->
 
       <aside class="sidebar">
 
 
-        <!-- LIVE -->
+        <!-- LIVE CLASS -->
 
         <div class="side-card">
 
-
           <h3>
-
-            🔴
-
-            <span>
-              Live Class
-            </span>
-
+            🔴 Live Class
           </h3>
 
 
-          <p
-            style="
-              color:#666;
-              font-size:12px;
-            "
-          >
+          <p>
 
-            Live class শুরু হলে
-            এখান থেকে সরাসরি
-            Join করতে পারবেন।
+            Live class শুরু হলে এখান থেকে
+            সরাসরি class-এ join করতে পারবেন।
 
           </p>
 
 
           <a
             href="#"
-            class="live-button"
+            class="live-btn"
             onclick="
-              alert(
-                'Live Class এখনো শুরু হয়নি।'
-              );
+              alert('Live Class এখনো শুরু হয়নি।');
               return false;
             "
           >
-            Join Live Class →
-          </a>
 
+            Join Live Class →
+
+          </a>
 
         </div>
 
@@ -956,18 +1094,12 @@
 
         <div class="side-card">
 
-
           <h3>
             📚 Course
           </h3>
 
 
-          <p
-            style="
-              color:#777;
-              font-size:12px;
-            "
-          >
+          <p>
             SNK Academy Free Course
           </p>
 
@@ -976,9 +1108,10 @@
             href="course.html"
             class="resource"
           >
-            ← সকল Lesson দেখুন
-          </a>
 
+            ← সকল Lesson দেখুন
+
+          </a>
 
         </div>
 
@@ -987,7 +1120,6 @@
         <!-- RESOURCES -->
 
         <div class="side-card">
-
 
           <h3>
             📎 Resources
@@ -998,13 +1130,13 @@
             href="#"
             class="resource"
             onclick="
-              alert(
-                'Course Notes শীঘ্রই যুক্ত করা হবে।'
-              );
+              alert('Course Notes শীঘ্রই যুক্ত করা হবে।');
               return false;
             "
           >
+
             📄 Course Notes
+
           </a>
 
 
@@ -1012,15 +1144,14 @@
             href="#"
             class="resource"
             onclick="
-              alert(
-                'Practice Files শীঘ্রই যুক্ত করা হবে।'
-              );
+              alert('Practice Files শীঘ্রই যুক্ত করা হবে।');
               return false;
             "
           >
-            📁 Practice Files
-          </a>
 
+            📁 Practice Files
+
+          </a>
 
         </div>
 
@@ -1037,9 +1168,9 @@
 
 
 
-<!-- =================================
+<!-- =====================================================
      FOOTER
-================================= -->
+===================================================== -->
 
 <footer class="footer">
 
@@ -1076,5 +1207,6 @@
 
 
 </body>
+
 </html>
 ```
